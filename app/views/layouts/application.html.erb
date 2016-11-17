@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NeosCart</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+  <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h1><%= link_to "Neos Cart", root_path %></h1>
+      </div>
+      <div class="col-xs-6 text-right">
+        <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+      </div>
+    </div>
+    <hr>
+    <%= yield %>
+  </div>
+
+</body>
+</html>
