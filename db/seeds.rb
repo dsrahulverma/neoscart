@@ -19,3 +19,8 @@ OrderStatus.create! id: 1, name: "In Progress"
 OrderStatus.create! id: 2, name: "Placed"
 OrderStatus.create! id: 3, name: "Shipped"
 OrderStatus.create! id: 4, name: "Cancelled"
+
+Promotion.delete_all
+Promotion.create! id: 1, name: "20%OFF", code: "PERCENT20OFF", value: 20.00, promo_type: "percent", conjunction: false
+Promotion.create! id: 2, name: "5%OFF", code: "PERCENT5OFF", value: 5.00, promo_type: "percent", conjunction: true
+Promotion.create! id: 3, name: "20POUNDSOFF", code: "FLAT20OFF", value: 20.00, promo_type: "flat", conjunction: true
