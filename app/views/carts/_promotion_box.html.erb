@@ -3,6 +3,12 @@
 		
 		<div class="row">
 		 <div class="col-xs-6">
+			
+			<% flash.each do |key, value| %>
+			  <%= content_tag :div, value, class: "flash #{key}" %>
+			<% end %>
+
+
 			<div class="row">
 				<%= form_for OrderPromotion.new, :url => url_for(:controller => 'order_promotions', :action => 'create', :method => :post)  do |f| %>
 					<div class="col-xs-8">

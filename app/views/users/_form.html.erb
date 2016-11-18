@@ -31,11 +31,11 @@
 
     <div class="form-group">
       <%= f.label :cc_number %><br>
-      <%= f.text_field :cc_number, class: 'form-control'  %>
+      <%= f.text_field :cc_number, class: 'form-control', maxlength:16  %>
     </div>
 
     <div class="form-group actions">
-      <%= f.submit "checkout", class: 'btn btn-primary' %>
+      <%= f.submit "Submit", class: 'btn btn-primary' %>
     </div>
 <% end %>
       </div></div>

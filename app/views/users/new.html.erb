@@ -1,3 +1,11 @@
-<div class="user">
+﻿<div class="user">
+
+	<div class="row">
+		<div class="col-xs-8 ">
+			<strong>Total amount to be paid:</strong>
+			<%= number_to_currency (current_order.subtotal - current_order.total_discount), unit:"£" %>
+		</div>
+	</div>
+	<br/>
 	<%= render 'form' %>
 </div>
